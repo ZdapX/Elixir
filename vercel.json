@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/*.ex": {
+      "runtime": "vercel-elixir@0.1.1"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.ex"
+    }
+  ]
+}
