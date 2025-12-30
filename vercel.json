@@ -1,13 +1,12 @@
 {
-  "functions": {
-    "api/*.ex": {
-      "runtime": "vercel-elixir@0.1.1"
-    }
-  },
-  "routes": [
+  "cleanUrls": true,
+  "framework": null,
+  "headers": [
     {
-      "src": "/(.*)",
-      "dest": "/api/index.ex"
+      "source": "/(.*)",
+      "headers": [
+        { "key": "cache-control", "value": "public, max-age=0, must-revalidate" }
+      ]
     }
   ]
 }
